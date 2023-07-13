@@ -32,7 +32,7 @@ module "dev1" {
   control_tower_parameters = {
     AccountEmail              = "iam.constantinescu+dev1@gmail.com"
     AccountName               = "dev1"
-    ManagedOrganizationalUnit = "Marketing"
+    ManagedOrganizationalUnit = "Departments"
     SSOUserEmail              = "iam.constantinescu+dev1@gmail.com"
     SSOUserFirstName          = "Dev1"
     SSOUserLastName           = "AFT"
