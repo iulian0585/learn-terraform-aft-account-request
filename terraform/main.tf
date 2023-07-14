@@ -23,7 +23,7 @@ module "demo_account" {
     group = "non-prod"
   }
 
-  account_customizations_name = "demo"
+  account_customizations_name = "sandbox"
 }
 
 module "alpha_account" {
@@ -51,5 +51,5 @@ module "alpha_account" {
     group = "non-prod"
   }
 
-  account_customizations_name = "alpha"
+  account_customizations_name = "sandbox"
 }
