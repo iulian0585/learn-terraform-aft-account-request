@@ -1,55 +1,27 @@
-# module "dev" {
-#   source = "./modules/aft-account-request"
+module "demo_account" {
+  source = "./modules/aft-account-request"
 
-#   control_tower_parameters = {
-#     AccountEmail              = "iam.constantinescu+dev@gmail.com"
-#     AccountName               = "dev"
-#     ManagedOrganizationalUnit = "Sandbox"
-#     SSOUserEmail              = "iam.constantinescu+dev@gmail.com"
-#     SSOUserFirstName          = "Dev"
-#     SSOUserLastName           = "AFT"
-#   }
+  control_tower_parameters = {
+    AccountEmail              = "iam.constantinescu+demo.account@gmail.com"
+    AccountName               = "demo"
+    ManagedOrganizationalUnit = "Sandbox"
+    SSOUserEmail              = "iam.constantinescu+demo.account@gmail.com"
+    SSOUserFirstName          = "Demo"
+    SSOUserLastName           = "AFT"
+  }
 
-#   account_tags = {
-#     "Learn Tutorial" = "AFT"
-#   }
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
 
-#   change_management_parameters = {
-#     change_requested_by = "HashiCorp Learn"
-#     change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
-#   }
+  change_management_parameters = {
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+  }
 
-#   custom_fields = {
-#     group = "non-prod"
-#   }
+  custom_fields = {
+    group = "non-prod"
+  }
 
-#   account_customizations_name = "dev"
-# }
-
-# module "dev1" {
-#   source = "./modules/aft-account-request"
-
-#   control_tower_parameters = {
-#     AccountEmail              = "iam.constantinescu+dev1@gmail.com"
-#     AccountName               = "dev1"
-#     ManagedOrganizationalUnit = "Departments"
-#     SSOUserEmail              = "iam.constantinescu+dev1@gmail.com"
-#     SSOUserFirstName          = "Dev1"
-#     SSOUserLastName           = "AFT"
-#   }
-
-#   account_tags = {
-#     "Learn Tutorial" = "AFT"
-#   }
-
-#   change_management_parameters = {
-#     change_requested_by = "HashiCorp Learn"
-#     change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
-#   }
-
-#   custom_fields = {
-#     group = "non-prod"
-#   }
-
-#   account_customizations_name = "dev1"
-# }
+  account_customizations_name = "demo"
+}
