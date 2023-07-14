@@ -25,3 +25,31 @@ module "demo_account" {
 
   account_customizations_name = "demo"
 }
+
+module "alpha_account" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "iam.constantinescu+alpha.account@gmail.com"
+    AccountName               = "alpha"
+    ManagedOrganizationalUnit = "Sandbox"
+    SSOUserEmail              = "iam.constantinescu+alpha.account@gmail.com"
+    SSOUserFirstName          = "Alpha"
+    SSOUserLastName           = "AFT"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+  }
+
+  custom_fields = {
+    group = "non-prod"
+  }
+
+  account_customizations_name = "alpha"
+}
