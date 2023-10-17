@@ -15,7 +15,7 @@ module "dev_account" {
   }
 
   change_management_parameters = {
-    change_requested_by = "HashiCorp Learn"
+    change_requested_by = "Iulian Constantinescu"
     change_reason       = "Development account creation"
   }
 
