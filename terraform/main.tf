@@ -1,55 +1,55 @@
-module "demo_account" {
+module "dev_account" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "iam.constantinescu+demo.account@gmail.com"
-    AccountName               = "demo"
-    ManagedOrganizationalUnit = "Sandbox"
-    SSOUserEmail              = "iam.constantinescu+demo.account@gmail.com"
-    SSOUserFirstName          = "Demo"
-    SSOUserLastName           = "AFT"
+    AccountEmail              = "i.constantinescu+dev@levi9.com"
+    AccountName               = "Dev"
+    ManagedOrganizationalUnit = "Dev"
+    SSOUserEmail              = "i.constantinescu+dev@levi9.com"
+    SSOUserFirstName          = "Dev"
+    SSOUserLastName           = "Account"
   }
 
   account_tags = {
-    "Learn Tutorial" = "AFT"
+    "Name" = "Dev"
   }
 
   change_management_parameters = {
     change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+    change_reason       = "Development account creation"
   }
 
   custom_fields = {
     group = "non-prod"
   }
 
-  account_customizations_name = "sandbox"
+  account_customizations_name = "dev"
 }
 
-module "alpha_account" {
+module "prod_account" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "iam.constantinescu+alpha.account@gmail.com"
-    AccountName               = "alpha"
-    ManagedOrganizationalUnit = "Sandbox"
-    SSOUserEmail              = "iam.constantinescu+alpha.account@gmail.com"
-    SSOUserFirstName          = "Alpha"
-    SSOUserLastName           = "AFT"
+    AccountEmail              = "i.constantinescu+prod@levi9.com"
+    AccountName               = "Prod"
+    ManagedOrganizationalUnit = "Prod"
+    SSOUserEmail              = "i.constantinescu+prod@levi9.com"
+    SSOUserFirstName          = "Prod"
+    SSOUserLastName           = "Account"
   }
 
   account_tags = {
-    "Learn Tutorial" = "AFT"
+    "Name" = "Prod"
   }
 
   change_management_parameters = {
-    change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+    change_requested_by = "Iulian Constantinescu"
+    change_reason       = "Production account creation"
   }
 
   custom_fields = {
-    group = "non-prod"
+    group = "prod"
   }
 
-  account_customizations_name = "sandbox"
+  account_customizations_name = "prod"
 }
