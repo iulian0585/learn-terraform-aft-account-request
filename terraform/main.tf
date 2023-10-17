@@ -53,3 +53,31 @@ module "prod_account" {
 
   account_customizations_name = "prod"
 }
+
+module "backup_account" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "i.constantinescu+backup@levi9.com"
+    AccountName               = "Backup"
+    ManagedOrganizationalUnit = "Shared-services"
+    SSOUserEmail              = "i.constantinescu+backup@levi9.com"
+    SSOUserFirstName          = "Backup"
+    SSOUserLastName           = "Account"
+  }
+
+  account_tags = {
+    "Name" = "Backup"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "Iulian Constantinescu"
+    change_reason       = "Backup account creation"
+  }
+
+  custom_fields = {
+    group = "non-prod"
+  }
+
+  account_customizations_name = "shared"
+}
