@@ -1,83 +1,83 @@
-module "dev_account" {
-  source = "./modules/aft-account-request"
+# module "dev_account" {
+#   source = "./modules/aft-account-request"
 
-  control_tower_parameters = {
-    AccountEmail              = "i.constantinescu+dev@levi9.com"
-    AccountName               = "Dev"
-    ManagedOrganizationalUnit = "Dev"
-    SSOUserEmail              = "i.constantinescu+dev@levi9.com"
-    SSOUserFirstName          = "Dev"
-    SSOUserLastName           = "Account"
-  }
+#   control_tower_parameters = {
+#     AccountEmail              = "i.constantinescu+dev@levi9.com"
+#     AccountName               = "Dev"
+#     ManagedOrganizationalUnit = "Dev"
+#     SSOUserEmail              = "i.constantinescu+dev@levi9.com"
+#     SSOUserFirstName          = "Dev"
+#     SSOUserLastName           = "Account"
+#   }
 
-  account_tags = {
-    "Name" = "Dev"
-  }
+#   account_tags = {
+#     "Name" = "Dev"
+#   }
 
-  change_management_parameters = {
-    change_requested_by = "Iulian Constantinescu"
-    change_reason       = "Development account creation"
-  }
+#   change_management_parameters = {
+#     change_requested_by = "Iulian Constantinescu"
+#     change_reason       = "Development account creation"
+#   }
 
-  custom_fields = {
-    group = "non-prod"
-  }
+#   custom_fields = {
+#     group = "non-prod"
+#   }
 
-  account_customizations_name = "dev"
-}
+#   account_customizations_name = "dev"
+# }
 
-module "prod_account" {
-  source = "./modules/aft-account-request"
+# module "prod_account" {
+#   source = "./modules/aft-account-request"
 
-  control_tower_parameters = {
-    AccountEmail              = "i.constantinescu+prod@levi9.com"
-    AccountName               = "Prod"
-    ManagedOrganizationalUnit = "Prod"
-    SSOUserEmail              = "i.constantinescu+prod@levi9.com"
-    SSOUserFirstName          = "Prod"
-    SSOUserLastName           = "Account"
-  }
+#   control_tower_parameters = {
+#     AccountEmail              = "i.constantinescu+prod@levi9.com"
+#     AccountName               = "Prod"
+#     ManagedOrganizationalUnit = "Prod"
+#     SSOUserEmail              = "i.constantinescu+prod@levi9.com"
+#     SSOUserFirstName          = "Prod"
+#     SSOUserLastName           = "Account"
+#   }
 
-  account_tags = {
-    "Name" = "Prod"
-  }
+#   account_tags = {
+#     "Name" = "Prod"
+#   }
 
-  change_management_parameters = {
-    change_requested_by = "Iulian Constantinescu"
-    change_reason       = "Production account creation"
-  }
+#   change_management_parameters = {
+#     change_requested_by = "Iulian Constantinescu"
+#     change_reason       = "Production account creation"
+#   }
 
-  custom_fields = {
-    group = "prod"
-  }
+#   custom_fields = {
+#     group = "prod"
+#   }
 
-  account_customizations_name = "prod"
-}
+#   account_customizations_name = "prod"
+# }
 
-module "backup_account" {
-  source = "./modules/aft-account-request"
+# module "backup_account" {
+#   source = "./modules/aft-account-request"
 
-  control_tower_parameters = {
-    AccountEmail              = "i.constantinescu+backup@levi9.com"
-    AccountName               = "Backup"
-    ManagedOrganizationalUnit = "Shared-services"
-    SSOUserEmail              = "i.constantinescu+backup@levi9.com"
-    SSOUserFirstName          = "Backup"
-    SSOUserLastName           = "Account"
-  }
+#   control_tower_parameters = {
+#     AccountEmail              = "i.constantinescu+backup@levi9.com"
+#     AccountName               = "Backup"
+#     ManagedOrganizationalUnit = "Shared-services"
+#     SSOUserEmail              = "i.constantinescu+backup@levi9.com"
+#     SSOUserFirstName          = "Backup"
+#     SSOUserLastName           = "Account"
+#   }
 
-  account_tags = {
-    "Name" = "Backup"
-  }
+#   account_tags = {
+#     "Name" = "Backup"
+#   }
 
-  change_management_parameters = {
-    change_requested_by = "Iulian Constantinescu"
-    change_reason       = "Backup account creation"
-  }
+#   change_management_parameters = {
+#     change_requested_by = "Iulian Constantinescu"
+#     change_reason       = "Backup account creation"
+#   }
 
-  custom_fields = {
-    group = "non-prod"
-  }
+#   custom_fields = {
+#     group = "non-prod"
+#   }
 
-  account_customizations_name = "shared"
-}
+#   account_customizations_name = "shared"
+# }
