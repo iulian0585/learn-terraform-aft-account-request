@@ -1,3 +1,59 @@
+# module "dev2_account" {
+#    source = "./modules/aft-account-request"
+
+#    control_tower_parameters = {
+#      AccountEmail              = "i.constantinescu+dev2@levi9.com"
+#      AccountName               = "Dev2"
+#      ManagedOrganizationalUnit = "Dev"
+#      SSOUserEmail              = "i.constantinescu+dev2@levi9.com"
+#      SSOUserFirstName          = "Dev2"
+#      SSOUserLastName           = "Account"
+#    }
+
+#    account_tags = {
+#      "Name" = "Dev2"
+#    }
+
+#   change_management_parameters = {
+#      change_requested_by = "Iulian Constantinescu"
+#      change_reason       = "Dev2 account creation"
+#    }
+
+#   custom_fields = {
+#     group = "non-prod"
+#   }
+
+#   account_customizations_name = "dev"
+# }
+
+# module "connect_account" {
+#   source = "./modules/aft-account-request"
+
+#   control_tower_parameters = {
+#     AccountEmail              = "i.constantinescu+con@levi9.com"
+#     AccountName               = "Connect"
+#     ManagedOrganizationalUnit = "Shared-services"
+#     SSOUserEmail              = "i.constantinescu+con@levi9.com"
+#     SSOUserFirstName          = "Connect"
+#     SSOUserLastName           = "Account"
+#   }
+
+#   account_tags = {
+#     "Name" = "Connect"
+#   }
+
+#   change_management_parameters = {
+#     change_requested_by = "Iulian Constantinescu"
+#     change_reason       = "Connectaccount creation"
+#   }
+
+#   custom_fields = {
+#     group = "non-prod"
+#   }
+
+#   account_customizations_name = "shared-services"
+# }
+
 module "sandbox_account" {
   source = "./modules/aft-account-request"
 
@@ -25,34 +81,6 @@ module "sandbox_account" {
 
   account_customizations_name = "sandbox"
 }
-
-# module "dev_account" {
-#   source = "./modules/aft-account-request"
-
-#   control_tower_parameters = {
-#     AccountEmail              = "i.constantinescu+dev@levi9.com"
-#     AccountName               = "Dev"
-#     ManagedOrganizationalUnit = "Dev"
-#     SSOUserEmail              = "i.constantinescu+dev@levi9.com"
-#     SSOUserFirstName          = "Dev"
-#     SSOUserLastName           = "Account"
-#   }
-
-#   account_tags = {
-#     "Name" = "Dev"
-#   }
-
-#   change_management_parameters = {
-#     change_requested_by = "Iulian Constantinescu"
-#     change_reason       = "Development account creation"
-#   }
-
-#   custom_fields = {
-#     group = "non-prod"
-#   }
-
-#   account_customizations_name = "dev"
-# }
 
 # module "prod_account" {
 #   source = "./modules/aft-account-request"
@@ -82,30 +110,30 @@ module "sandbox_account" {
 #   account_customizations_name = "prod"
 # }
 
-# module "backup_account" {
-#   source = "./modules/aft-account-request"
+module "bak_account" {
+  source = "./modules/aft-account-request"
 
-#   control_tower_parameters = {
-#     AccountEmail              = "i.constantinescu+backup@levi9.com"
-#     AccountName               = "Backup"
-#     ManagedOrganizationalUnit = "Shared-services"
-#     SSOUserEmail              = "i.constantinescu+backup@levi9.com"
-#     SSOUserFirstName          = "Backup"
-#     SSOUserLastName           = "Account"
-#   }
+  control_tower_parameters = {
+    AccountEmail              = "i.constantinescu+bak@levi9.com"
+    AccountName               = "Bak"
+    ManagedOrganizationalUnit = "Shared-services"
+    SSOUserEmail              = "i.constantinescu+bak@levi9.com"
+    SSOUserFirstName          = "Bak"
+    SSOUserLastName           = "Account"
+  }
 
-#   account_tags = {
-#     "Name" = "Backup"
-#   }
+  account_tags = {
+    "Name" = "Bak"
+  }
 
-#   change_management_parameters = {
-#     change_requested_by = "Iulian Constantinescu"
-#     change_reason       = "Backup account creation"
-#   }
+  change_management_parameters = {
+    change_requested_by = "Iulian Constantinescu"
+    change_reason       = "Bak account creation"
+  }
 
-#   custom_fields = {
-#     group = "non-prod"
-#   }
+  custom_fields = {
+    group = "non-prod"
+  }
 
-#   account_customizations_name = "shared"
-# }
+  account_customizations_name = "shared"
+}
