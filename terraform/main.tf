@@ -110,30 +110,30 @@ module "sandbox_account" {
 #   account_customizations_name = "prod"
 # }
 
-module "bak_account" {
-  source = "./modules/aft-account-request"
+# module "bak_account" {
+#   source = "./modules/aft-account-request"
 
-  control_tower_parameters = {
-    AccountEmail              = "i.constantinescu+bak@levi9.com"
-    AccountName               = "Bak"
-    ManagedOrganizationalUnit = "Shared-services"
-    SSOUserEmail              = "i.constantinescu+bak@levi9.com"
-    SSOUserFirstName          = "Bak"
-    SSOUserLastName           = "Account"
-  }
+#   control_tower_parameters = {
+#     AccountEmail              = "i.constantinescu+bak@levi9.com"
+#     AccountName               = "Bak"
+#     ManagedOrganizationalUnit = "Shared-services"
+#     SSOUserEmail              = "i.constantinescu+bak@levi9.com"
+#     SSOUserFirstName          = "Bak"
+#     SSOUserLastName           = "Account"
+#   }
 
-  account_tags = {
-    "Name" = "Bak"
-  }
+#   account_tags = {
+#     "Name" = "Bak"
+#   }
 
-  change_management_parameters = {
-    change_requested_by = "Iulian Constantinescu"
-    change_reason       = "Bak account creation"
-  }
+#   change_management_parameters = {
+#     change_requested_by = "Iulian Constantinescu"
+#     change_reason       = "Bak account creation"
+#   }
 
-  custom_fields = {
-    group = "non-prod"
-  }
+#   custom_fields = {
+#     group = "non-prod"
+#   }
 
-  account_customizations_name = "shared"
-}
+#   account_customizations_name = "shared"
+# }
