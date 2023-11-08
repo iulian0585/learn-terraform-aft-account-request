@@ -30,34 +30,6 @@ module "shared_services_account" {
   account_customizations_name = "shared-services"
 }
 
-module "connect_account" {
-  source = "./modules/aft-account-request"
-
-  control_tower_parameters = {
-    AccountEmail              = "i.constantinescu+con@levi9.com"
-    AccountName               = "Connect"
-    ManagedOrganizationalUnit = "Shared-services"
-    SSOUserEmail              = "i.constantinescu+con@levi9.com"
-    SSOUserFirstName          = "Connect"
-    SSOUserLastName           = "Account"
-  }
-
-  account_tags = {
-    "Name" = "Connect"
-  }
-
-  change_management_parameters = {
-    change_requested_by = "Iulian Constantinescu"
-    change_reason       = "Connect account creation"
-  }
-
-  custom_fields = {
-    group = "non-prod"
-  }
-
-  account_customizations_name = "shared-services"
-}
-
 module "backup2_account" {
   source = "./modules/aft-account-request"
 
