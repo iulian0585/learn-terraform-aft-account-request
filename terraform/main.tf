@@ -91,25 +91,25 @@ module "sandbox_account" {
 }
 
 module "dev2_account" {
-   source = "./modules/aft-account-request"
+  source = "./modules/aft-account-request"
 
-   control_tower_parameters = {
-     AccountEmail              = "i.constantinescu+dev2@levi9.com"
-     AccountName               = "Dev2"
-     ManagedOrganizationalUnit = "Dev"
-     SSOUserEmail              = "i.constantinescu+dev2@levi9.com"
-     SSOUserFirstName          = "Dev2"
-     SSOUserLastName           = "Account"
-   }
+  control_tower_parameters = {
+    AccountEmail              = "i.constantinescu+dev2@levi9.com"
+    AccountName               = "Dev2"
+    ManagedOrganizationalUnit = "Dev"
+    SSOUserEmail              = "i.constantinescu+dev2@levi9.com"
+    SSOUserFirstName          = "Dev2"
+    SSOUserLastName           = "Account"
+  }
 
-   account_tags = {
-     "Name" = "Dev2"
-   }
+  account_tags = {
+    "Name" = "Dev2"
+  }
 
   change_management_parameters = {
-     change_requested_by = "Iulian Constantinescu"
-     change_reason       = "Dev2 account creation"
-   }
+    change_requested_by = "Iulian Constantinescu"
+    change_reason       = "Dev2 account creation"
+  }
 
   custom_fields = {
     group = "non-prod"
